@@ -20,7 +20,7 @@ const Navbar = () => {
     console.log(totalQTY);
 
     return (
-        <div className='md:w-11/12 mx-auto bg-white flex justify-between items-center p-2'>
+        <div className='md:w-11/12 mx-auto bg-white flex justify-between items-center px-2'>
 
             {/* -------------Logo ---------------- */}
             <div className='flex items-center'>
