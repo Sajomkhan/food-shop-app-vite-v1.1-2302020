@@ -5,12 +5,14 @@ import Hero from "../components/Hero";
 
 function Home() {
   return (
-    <div className="w-11/12 lg:max-w-[1400px] mx-auto">
+    <>
       <Hero />
-      <TopFoods />
-      <Food />
-      <Category />
-    </div>
+      <div className="w-11/12 mx-auto">
+        <TopFoods />
+        <Food />
+        <Category />
+      </div>
+    </>
   );
 }
 
