@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <div className="p-2">
+      <div className="p-6">
         <TopFoods />
         <Food />
         <Category />

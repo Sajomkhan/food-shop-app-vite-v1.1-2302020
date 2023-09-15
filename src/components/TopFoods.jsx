@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 const TopFoods = () => {
   return (
     <div className='mt-11'>
-      <h1 className='text-purple-700 font-bold text-2xl md:text-4xl text-center'> Top Rated Menu Items </h1>
-      <div className='p-4 py-7 grid md:grid-cols-3 gap-6'>
-        <div className='rounded-xl relative'>
+      <h1 className='text-purple-700 font-bold text-2xl md:text-4xl lg:text-center'> Top Rated Menu Items </h1>
+      <div className='py-7 grid md:grid-cols-3 gap-6'>
+        <div className='rounded-md relative'>
           {/* Overlay */}
           <div className='absolute w-full h-full bg-purple-600 bg-opacity-30 rounded-xl text-white'>
             <p className='font-bold text-2xl px-2 pt-4'>Sun's Out, BOGO's Out</p>

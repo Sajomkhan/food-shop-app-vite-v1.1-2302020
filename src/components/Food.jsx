@@ -36,8 +36,8 @@ const Food = () => {
   };
 
   return (
-    <div className='px-4 py-11'>
-      <h1 className='text-purple-700 font-bold text-2xl md:text-4xl text-center'>
+    <div className='py-11'>
+      <h1 className='text-purple-700 font-bold text-2xl md:text-4xl lg:text-center mb-5'>
         Regular Menu Items
       </h1>
 
