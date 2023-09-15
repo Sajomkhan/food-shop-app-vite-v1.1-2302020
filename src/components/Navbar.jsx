@@ -17,10 +17,9 @@ const Navbar = () => {
 
     const dispatch = useDispatch();
     const totalQTY = useSelector(selectTotalQTY);
-    console.log(totalQTY);
 
     return (
-        <div className='md:w-11/12 mx-auto bg-white flex justify-between items-center px-2'>
+        <div className=' md:w-10/12 mx-auto flex justify-between items-center bg-white'>
 
             {/* -------------Logo ---------------- */}
             <div className='flex items-center'>

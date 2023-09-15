@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <Hero />
-      <div className="w-11/12 mx-auto">
+      <div className="p-2">
         <TopFoods />
         <Food />
         <Category />
