@@ -6,8 +6,10 @@ import Hero from "../components/Hero";
 function Home() {
   return (
     <>
-      <Hero />
-      <div className="p-6">
+      <div className="px-2">
+        <Hero />
+      </div>
+      <div className="px-6">
         <TopFoods />
         <Food />
         <Category />

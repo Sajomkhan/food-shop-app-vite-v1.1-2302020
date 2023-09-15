@@ -7,8 +7,8 @@ const CartCount = ({ totalQTY, onClearCartItems }) => {
   return (
     <div className=" fixed z-10 top-0 w-full md:w-9/12 bg-gray-800 text-white h-12 flex items-center justify-between px-4">
       <div className="flex items-center gap-2">
-        <Link to="/" className="flex md:gap-3 items-center cursor-pointer">
-          <KeyboardDoubleArrowLeftIcon className="w-5 h-5 hover:text-orange-500 stroke-[2]" />
+        <Link to="/" className="flex md:gap-2 items-center cursor-pointer hover:text-orange-500 ">
+          <KeyboardDoubleArrowLeftIcon className="w-5 h-5 stroke-[2]" />
           Back
         </Link>
       </div>
@@ -29,7 +29,7 @@ const CartCount = ({ totalQTY, onClearCartItems }) => {
           onClick={onClearCartItems}
           className="rounded bg-gray-900  p-1"
         >
-          <DeleteIcon className="w-5 h-5" />
+          <DeleteIcon className="w-5 h-5  hover:text-orange-500 " />
         </button>
       </div>
       <Link to="/" className="flex items-center">
@@ -37,7 +37,7 @@ const CartCount = ({ totalQTY, onClearCartItems }) => {
           type="button"
           className="rounded bg-gray-950 active:scale-90 p-0.5"
         >
-          <CloseIcon className="w-5 h-5 text-white stroke-[2]" />
+          <CloseIcon className="w-5 h-5 text-white stroke-[2]  hover:text-orange-500 " />
         </button>
       </Link>
     </div>

@@ -19,7 +19,7 @@ const Navbar = () => {
     const totalQTY = useSelector(selectTotalQTY);
 
     return (
-        <div className=' md:w-10/12 mx-auto flex justify-between items-center bg-white'>
+        <div className='md:w-9/12 mx-auto flex justify-between items-center bg-white px-3 lg:px-0'>
 
             {/* -------------Logo ---------------- */}
             <div className='flex items-center'>
@@ -32,7 +32,7 @@ const Navbar = () => {
             </div>
 
             {/* ----------- Search Input ----------- */}
-            <div className='hidden xl:flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px] bg-gray-50 drop-shadow-lg rounded-full '>
+            <div className='hidden xl:flex items-center px-2 md:w-[300px] 3xl:w-[500px] bg-gray-50 drop-shadow-lg rounded-full '>
                 <AiOutlineSearch size={25} />
                 <input
                     className='bg-transparent p-2 w-full focus:outline-none'
@@ -42,10 +42,10 @@ const Navbar = () => {
             </div>
 
             {/* --------------- Nav for Destop --------------- */}
-            <nav className='hidden md:flex gap-x-6 font-semibold text-lg bg-gray-50 text-purple-800 shadow-md rounded-3xl py-2 px-4'>
-                <Link to='/' className='active:text-blue-600  hover:text-blue-800'>Home</Link>
-                <Link to='/foodpage' state={20} className='active:text-blue-600  hover:text-blue-800'>Foods</Link>
-                <Link to='/login' className='active:text-blue-600  hover:text-blue-800'>Login</Link>
+            <nav className='hidden md:flex gap-x-6 font-semibold bg-gray-50 text-purple-800 shadow-md rounded-3xl py-2 px-4'>
+                <Link to='/' className='hover:text-blue-800 font-semibold'>Home</Link>
+                <Link to='/foodpage' state={20} className='hover:text-blue-800  font-semibold'>Foods</Link>
+                <Link to='/login' className='hover:text-blue-800  font-semibold'>Login</Link>
             </nav>
 
             {/*-------------- Shop Cart -------------- */}

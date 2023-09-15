@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectCartItems,
@@ -43,15 +43,15 @@ const Carts = () => {
           </div>
         )}
         {/*---------------- cart footer---------------- */}
-        <div className="fixed w-full md:w-9/12 bottom-0 bg-gray-800 text-white h-16">
-          <div className="flex h-full items-center justify-center  gap-x-32 md:w-7/12 mx-auto ">
-            <h4 className="text-base font-semibold uppercase">SubTotal</h4>
-            <p className="text-center hidden xl:flex">
+        <div className="fixed bottom-0 w-full md:w-9/12 bg-gray-800 text-white h-16">
+          <div className="flex h-full items-center justify-between w-8/12 md:w-6/12 mx-auto ">
+            <h4 className="text-base font-semibold uppercase">Total</h4>
+            <p className="hidden xl:flex text-cente ">
               Taxes and Shipping Will Calculate At Shipping
             </p>
-            <h4 className="font-bold rounded bg-theme-cart pr-7 py-0.5">
+            <p className="text-lg font-bold py-0.5">
               ${totalAmount}
-            </h4>
+            </p>
           </div>
         </div>
       </div>

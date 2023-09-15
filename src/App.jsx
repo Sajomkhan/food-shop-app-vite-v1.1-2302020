@@ -15,7 +15,7 @@ function App() {
         <div className="fixed z-40 top-0 w-full">
           <Navbar />
         </div>
-        <div className="xl:w-10/12 mx-auto mt-20">
+        <div className="md:w-9/12 mx-auto mt-20">
           <Outlet />
         </div>
         <Footer />
