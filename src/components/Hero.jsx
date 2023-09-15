@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="">
+    <div className="p-1">
       <div className="relative">
         {/*---------------- Image---------------- */}
         <img
