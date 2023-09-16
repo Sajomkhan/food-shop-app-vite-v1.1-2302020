@@ -1,3 +1,5 @@
+import hero_image from "../assets/hero.jpg"
+
 const Hero = () => {
   return (
     <div className="p-1">
@@ -5,7 +7,7 @@ const Hero = () => {
         {/*---------------- Image---------------- */}
         <img
           className="w-full h-[500px] lg:h-[600px] object-cover rounded-md "
-          src="/assets/hero/1.jpg"
+          src={hero_image}
           alt="Image"
         />
         {/*-------------- Overlay-------------- */}

@@ -3,7 +3,7 @@ import { data } from '../data/data.js';
 
 import { useDispatch } from "react-redux";
 import { setAddItemToCart, } from "../features/carts/CartSlice.js";
-import {selectCartItems, selectTotalAmount, selectTotalQTY, setClearCartItems, setGetTotals} from "../features/carts/CartSlice.js";
+import { setGetTotals} from "../features/carts/CartSlice.js";
 
 const Food = () => {  
   const [foods, setFoods] = useState(data);

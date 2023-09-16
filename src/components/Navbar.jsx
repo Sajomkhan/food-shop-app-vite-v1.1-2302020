@@ -18,12 +18,16 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const totalQTY = useSelector(selectTotalQTY);
 
+    const navToggle = () => {
+        setNav(!nav)
+    }
+
     return (
         <div className='md:w-9/12 mx-auto flex justify-between items-center bg-white px-3 lg:px-0'>
 
             {/* -------------Logo ---------------- */}
             <div className='flex items-center'>
-                <div className='cursor-pointer mr-2' onClick={() => setNav(!nav)}>
+                <div className='cursor-pointer mr-2' onClick={navToggle}>
                     <AiOutlineMenu size={25} />
                 </div>
                 <h1 className='text-2xl md:text-3xl lg:text-4xl px-2'>
@@ -60,12 +64,12 @@ const Navbar = () => {
 
             {/*------------------ Mobile Menu------------------ */}
             {/* Overlay */}
-            {nav ? <div className='bg-black/50 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
+            {nav ? <div onClick={navToggle} className='bg-black/50 fixed w-full h-screen z-10 top-0 left-0'></div> : ''}
 
             {/* Side drawer menu */}
-            <div className={nav ? 'fixed top-0 left-0 w-[300px] h-screen bg-white z-20 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300'}>
+            <div className={nav ? 'fixed top-0 left-0 w-[250px] h-screen bg-white z-20 duration-300' : 'fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300'}>
                 <AiOutlineClose
-                    onClick={() => setNav(!nav)}
+                    onClick={navToggle}
                     size={30}
                     className='absolute right-4 top-4 cursor-pointer'
                 />
@@ -73,19 +77,19 @@ const Navbar = () => {
                     Best <span className='font-bold'>Eats</span>
                 </h2>
                 <nav>
-                    <div className='p-4 text-lg font-semibold flex flex-col border-4 border-b-gray-200 gap-y-2'>
-                        <Link to='/' className='flex active:text-blue-600  hover:text-blue-800'><AiOutlineHome size={25} className='mr-4'/>Home</Link>
-                        <Link to='/foodpage' state={20}className='active:text-blue-600  hover:text-blue-800'><AppRegistrationIcon size={25} className='mr-4'/>Foods</Link>
-                        <Link to='/login' className='active:text-blue-600  hover:text-blue-800'><LoginIcon size={25} className='mr-4' />Login</Link>
+                    <div className='p-4 flex flex-col border-4 border-b-gray-200 gap-y-3'>
+                        <Link to='/' onClick={navToggle} className='flex text-xl active:text-blue-600  hover:text-blue-800'><AiOutlineHome size={25} className='mr-4'/>Home</Link>
+                        <Link to='/foodpage' onClick={navToggle} state={20}className=' text-xl active:text-blue-600  hover:text-blue-800'><AppRegistrationIcon size={25} className='mr-4'/>Foods</Link>
+                        <Link to='/login' onClick={navToggle} className=' text-xl active:text-blue-600  hover:text-blue-800'><LoginIcon size={25} className='mr-4' />Login</Link>
                     </div>
-                    <ul className='flex flex-col p-4 text-gray-800 gap-y-2'>
-                        <li className='text-xl flex'><TbTruckDelivery size={25} className='mr-4' /> <Link to='/register'>Orders</Link></li>
-                        <li className='text-xl flex'><MdFavorite size={25} className='mr-4' /> Favorites</li>
-                        <li className='text-xl flex'><FaWallet size={25} className='mr-4' /> Wallet</li>
-                        <li className='text-xl flex'><MdHelp size={25} className='mr-4' /> Help</li>
-                        <li className='text-xl flex'><AiFillTag size={25} className='mr-4' /> Promotions</li>
-                        <li className='text-xl flex'><BsFillSaveFill size={25} className='mr-4' /> Best Ones</li>
-                        <li className='text-xl flex'><FaUserFriends size={25} className='mr-4' /> Invite Friends</li>
+                    <ul className='flex flex-col p-4 text-gray-800 gap-y-3'>
+                        <li className='text-xl flex gap-5'><TbTruckDelivery size={25} /> <Link to='/register' className='text-xl '>Orders</Link></li>
+                        <li className='text-xl flex gap-5'><MdFavorite size={25} /> Favorites</li>
+                        <li className='text-xl flex gap-5'><FaWallet size={25} /> Wallet</li>
+                        <li className='text-xl flex gap-5'><MdHelp size={25} /> Help</li>
+                        <li className='text-xl flex gap-5'><AiFillTag size={25} /> Promotions</li>
+                        <li className='text-xl flex gap-5'><BsFillSaveFill size={25} /> Best Ones</li>
+                        <li className='text-xl flex gap-5'><FaUserFriends size={25} /> Invite Friends</li>
                     </ul>
                 </nav>
             </div>
