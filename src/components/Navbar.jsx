@@ -16,7 +16,11 @@ import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import { Badge } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCartItems, selectTotalQTY, setGetTotals } from "../features/carts/CartSlice";
+import {
+  selectCartItems,
+  selectTotalQTY,
+  setGetTotals,
+} from "../features/carts/CartSlice";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -40,9 +44,9 @@ const Navbar = () => {
         <div className="cursor-pointer mr-2" onClick={navToggle}>
           <AiOutlineMenu size={25} />
         </div>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl px-2">
-          Food <span className="font-bold text-purple-700">Store</span>
-        </h1>
+        <Link to={"/"} className="font-bold text-2xl md:text-3xl px-2">
+          Food <span className="text-purple-700">Store</span>
+        </Link>
       </div>
 
       {/* ----------- Search Input ----------- */}
@@ -138,16 +142,32 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col p-4 text-gray-800 gap-y-3">
             <li className="text-xl flex gap-5">
-              <TbTruckDelivery size={25} />{" "}
-              <Link to="/register" className="text-xl ">
+              <TbTruckDelivery size={25} />
+              <Link to="/login" className="text-xl ">
                 Orders
               </Link>
             </li>
             <li className="text-xl flex gap-5">
-              <MdFavorite size={25} /> Favorites
+              <MdFavorite size={25} />
+              <Link
+                to="/foodPage"
+                state={20}
+                onClick={navToggle}
+                className="text-xl "
+              >
+                Favorites
+              </Link>
             </li>
             <li className="text-xl flex gap-5">
-              <FaWallet size={25} /> Wallet
+              <FaWallet size={25} />
+              <Link
+                to="/foodPage"
+                state={20}
+                onClick={navToggle}
+                className="text-xl "
+              >
+                Wallet
+              </Link>
             </li>
             <li className="text-xl flex gap-5">
               <MdHelp size={25} /> Help

@@ -74,7 +74,7 @@ const Food = () => {
               alt={item.name}
               className='w-full h-[200px] object-cover rounded-t-lg'
             />
-            <div className="flex flex-col w-full items-center">
+            <div className="flex flex-col w-full items-center mt-2">
               <p className='font-semibold text-[17px] place-self-start ml-3'>{item.name}</p>
               <div className="flex flex-row w-full justify-between items-center">
                 <div className='mx-3'>
