@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import toast from "react-hot-toast";
 
 const initialState = {
-  cartItems: localStorage.getItem("cart")  ?  JSON.parse(localStorage.getItem("cart"))  :  [], // Let Suppose Database
+  cartItems: localStorage.getItem("cart")
+    ? JSON.parse(localStorage.getItem("cart"))
+    : [], // Let Suppose Database
   cartTotalAmount: 0,
   cartTotalQantity: 0,
 };
@@ -11,12 +13,11 @@ const CartSlice = createSlice({
   initialState,
   name: "cart",
   reducers: {
-
     // add cart item
     setAddItemToCart: (state, action) => {
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
-      );                                                                          
+      );
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
         toast.success(`${action.payload.category} QTY Increased`);
@@ -66,26 +67,29 @@ const CartSlice = createSlice({
     },
 
     // delete cart all item
-    setClearCartItems: (state, ) => {
+    setClearCartItems: (state) => {
       state.cartItems = [];
       toast.success(`Cart Cleared`);
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
     // total amount calculation
-    setGetTotals: (state, ) => {
-      let { totalAmount, totalQTY } = state.cartItems.reduce((cartTotal, cartItem)=> {
-        const { price, cartQuantity } = cartItem;
-        const totalPrice = price * cartQuantity;
+    setGetTotals: (state) => {
+      let { totalAmount, totalQTY } = state.cartItems.reduce(
+        (cartTotal, cartItem) => {
+          const { price, cartQuantity } = cartItem;
+          const totalPrice = price * cartQuantity;
 
-        cartTotal.totalAmount += totalPrice;
-        cartTotal.totalQTY += cartQuantity;
+          cartTotal.totalAmount += totalPrice;
+          cartTotal.totalQTY += cartQuantity;
 
-        return cartTotal;
-      }, {
-        totalAmount: 0,
-        totalQTY: 0,
-      });
+          return cartTotal;
+        },
+        {
+          totalAmount: 0,
+          totalQTY: 0,
+        }
+      );
       state.cartTotalAmount = totalAmount;
       state.cartTotalQantity = totalQTY;
     },
@@ -101,7 +105,7 @@ export const {
   setIncreaseItemQTY,
   setDecreaseItemQTY,
   setClearCartItems,
-  setGetTotals
+  setGetTotals,
 } = CartSlice.actions;
 
 //state export
