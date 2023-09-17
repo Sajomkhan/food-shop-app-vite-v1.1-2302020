@@ -1,9 +1,8 @@
-import  { useState, useEffect } from 'react';
+import  { useState } from 'react';
 import { data } from '../data/data.js';
 
 import { useDispatch } from "react-redux";
 import { setAddItemToCart, } from "../features/carts/CartSlice.js";
-import { setGetTotals} from "../features/carts/CartSlice.js";
 
 const Food = () => {  
   const [foods, setFoods] = useState(data);
@@ -12,10 +11,6 @@ const Food = () => {
   const handleBuyItem =(item) =>{
     dispatch(setAddItemToCart(item ))
   }
-
-  useEffect(() => {
-    dispatch(setGetTotals())
-  },[foods])
 
   // Filter Type burgers/pizza/etc
   const filterType = (category) => {

@@ -16,20 +16,16 @@ const CartSlice = createSlice({
     setAddItemToCart: (state, action) => {
       const itemIndex = state.cartItems.findIndex(
         (item) => item.id === action.payload.id
-      );
-                                                                          
+      );                                                                          
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-
         toast.success(`${action.payload.category} QTY Increased`);
       } else {
         const temp = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(temp);
-
         toast.success(`${action.payload.category} added to Cart`);
       }
       console.log(state.cartItems.cartQuantity);
-
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
@@ -52,7 +48,6 @@ const CartSlice = createSlice({
       );
       if (itemIndex >= 0) {
         state.cartItems[itemIndex].cartQuantity += 1;
-
         toast.success(`${action.payload.category} QTY Increased`);
       }
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
@@ -65,21 +60,20 @@ const CartSlice = createSlice({
       );
       if (state.cartItems[itemIndex].cartQuantity > 1) {
         state.cartItems[itemIndex].cartQuantity -= 1;
-
         toast.success(`${action.payload.category} QTY Decreased`);
       }
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
     // delete cart all item
-    setClearCartItems: (state, action) => {
+    setClearCartItems: (state, ) => {
       state.cartItems = [];
       toast.success(`Cart Cleared`);
       localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
 
     // total amount calculation
-    setGetTotals: (state, action) => {
+    setGetTotals: (state, ) => {
       let { totalAmount, totalQTY } = state.cartItems.reduce((cartTotal, cartItem)=> {
         const { price, cartQuantity } = cartItem;
         const totalPrice = price * cartQuantity;
