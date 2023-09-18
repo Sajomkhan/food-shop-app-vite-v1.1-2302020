@@ -43,36 +43,31 @@ const Food = () => {
           <p className="font-bold text-gray-700">Filter Type</p>
           <div className="flex justfiy-between flex-wrap">
             <button onClick={() => setFoods(data)} className="btn_outline m-1">
-              {" "}
-              All{" "}
+              All
             </button>
             <button
               onClick={() => filterType("burger")}
               className="btn_outline m-1"
             >
-              {" "}
-              Burger{" "}
+              Burger
             </button>
             <button
               onClick={() => filterType("pizza")}
               className="btn_outline m-1"
             >
-              {" "}
-              Pizza{" "}
+              Pizza
             </button>
             <button
               onClick={() => filterType("salad")}
               className="btn_outline m-1"
             >
-              {" "}
-              Salads{" "}
+              Salads
             </button>
             <button
               onClick={() => filterType("chicken")}
               className="btn_outline m-1"
             >
-              {" "}
-              Chicken{" "}
+              Chicken
             </button>
           </div>
         </div>
@@ -82,20 +77,16 @@ const Food = () => {
           <p className="font-bold text-gray-700">Filter Price</p>
           <div className="flex max-w-[390px] w-full">
             <button onClick={() => filterPrice(10)} className="m-1 btn_outline">
-              {" "}
-              $10{" "}
+              $10
             </button>
             <button onClick={() => filterPrice(15)} className="m-1 btn_outline">
-              {" "}
-              $15{" "}
+              $15
             </button>
             <button onClick={() => filterPrice(20)} className="m-1 btn_outline">
-              {" "}
-              $20{" "}
+              $20
             </button>
             <button onClick={() => filterPrice(25)} className="m-1 btn_outline">
-              {" "}
-              $25{" "}
+              $25
             </button>
           </div>
         </div>
@@ -123,7 +114,7 @@ const Food = () => {
                 </div>
                 <div className="mx-3">
                   <button
-                    className=" text-white border-none bg-purple-700 hover:bg-purple-900 rounded-md shadow-md my-2 px-2 p-1"
+                    className="btn my-2"
                     onClick={() => handleBuyItem(item)}
                   >
                     Shop Now

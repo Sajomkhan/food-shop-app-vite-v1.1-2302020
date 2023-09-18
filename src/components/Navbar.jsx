@@ -38,14 +38,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="md:w-9/12 mx-auto flex justify-between items-center bg-white px-3 lg:px-0">
+    <div className="md:w-9/12 mx-auto flex justify-between items-center bg-white px-3 lg:px-0 py-2">
       {/* -------------Logo ---------------- */}
       <div className="flex items-center">
-        <div className="cursor-pointer mr-2" onClick={navToggle}>
+        <div className="cursor-pointer p-1 mr-2 hover:bg-gray-200 rounded-sm " onClick={navToggle}>
           <AiOutlineMenu size={25} />
         </div>
-        <Link to={"/"} className="font-bold text-2xl md:text-3xl px-2">
-          Food <span className="text-purple-700">Store</span>
+        <Link to={"/"} className="group flex gap-2 font-bold text-2xl md:text-3xl px-2">
+          <span className="group-hover:text-purple-700">Food</span> <span className="text-purple-700 group-hover:text-blue-700">Store</span>
         </Link>
       </div>
 
