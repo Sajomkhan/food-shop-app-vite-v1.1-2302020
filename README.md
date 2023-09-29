@@ -1,8 +1,7 @@
 # A awesome Ecommerce Food Shop App with React Vite, Redux, Tailwindcss
 ### Full Mobile Responsive App
 
-#### Go to Live Project: https://ecommerce-store-react-redux-tailwind.netlify.app/
-
+#### Go to Live Project: https://food-shop-app.netlify.app/
 [![image](./public/image.png)](https://food-shop-app.netlify.app/)
 
 ### Full Mobile Responsive Web Page
