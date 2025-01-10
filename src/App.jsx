@@ -7,6 +7,8 @@ import Carts from "./features/carts/Carts";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
+import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 function App() {
   const Layout = () => {
